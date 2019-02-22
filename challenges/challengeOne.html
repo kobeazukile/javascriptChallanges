@@ -1,0 +1,28 @@
+<h1> checks two numbers and returns true if one of the numbers is65 or if their sum is 65</h1>
+		<hr color="cyan">
+		<br>
+
+<form name="myForm" action="post">
+    <input type="text" id="textbox1"/>
+    <input type="text" id="textbox2"/>
+    <button type="submit" id="submit_btn">Submit</button>
+    </form>
+    <hr color="cyan">
+
+    
+    
+    <script>
+    
+    var submitBtn = document.querySelector('#submit_btn');
+    submitBtn.addEventListener('click', checkNumber, false);
+    
+    function checkNumber(e){
+    e.preventDefault();
+    var number1 = Number(document.getElementById('textbox1').value);
+    var number2 = Number(document.getElementById('textbox2').value);
+    var status = (number1 == 65 || number2 == 65 || (number1 + number2) == 65) ? "true" : "false";
+    document.write(status);
+
+
+    }
+    </script>
